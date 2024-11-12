@@ -1,0 +1,43 @@
+
+[package]
+authors = ["William D. Jones <thor0505@comcast.net>"]
+edition = "2021"
+readme = "README.md"
+name = "msp430g2xx"
+version = "0.5.0"
+description = "Peripheral access API for MSP430G2XX and MSP430F2XX microcontrollers"
+documentation = "https://docs.rs/msp430g2xx"
+keywords = ["no-std", "msp430", "ti", "launchpad"]
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/cr1901/msp430g2xx"
+
+[dependencies]
+msp430 = "0.4.0"
+vcell = "0.1.0"
+
+[dependencies.critical-section]
+optional = true
+version = "1.0.0"
+
+[dependencies.msp430-rt]
+optional = true
+version = "0.4.0"
+
+[features]
+rt = ["msp430-rt/device"]
+msp430g2x01 = []
+msp430g2x02 = []
+msp430g2x03 = []
+msp430g2x10 = []
+msp430g2x30 = []
+msp430g2x11 = []
+msp430g2x21 = []
+msp430g2x31 = []
+msp430g2x12 = []
+msp430g2x32 = []
+msp430g2x52 = []
+msp430g2x13 = []
+msp430g2x33 = []
+msp430g2x53 = []
+msp430g2x44 = []
+msp430g2x55 = []

@@ -1,0 +1,6 @@
+# DoIt databases for crate generation
+.doit.db.*
+# Intermediate files for crate generation
+intr/
+Cargo.lock
+target/
