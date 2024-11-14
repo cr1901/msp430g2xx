@@ -1,108 +1,108 @@
 #[doc = "Register `USICKCTL` reader"]
-pub type R = crate::R<UsickctlSpec>;
+pub type R = crate::R<USICKCTL_SPEC>;
 #[doc = "Register `USICKCTL` writer"]
-pub type W = crate::W<UsickctlSpec>;
+pub type W = crate::W<USICKCTL_SPEC>;
 #[doc = "Field `USISWCLK` reader - USI Software Clock"]
-pub type UsiswclkR = crate::BitReader;
+pub type USISWCLK_R = crate::BitReader;
 #[doc = "Field `USISWCLK` writer - USI Software Clock"]
-pub type UsiswclkW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type USISWCLK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `USICKPL` reader - USI Clock Polarity 0:Inactive=Low / 1:Inactive=High"]
-pub type UsickplR = crate::BitReader;
+pub type USICKPL_R = crate::BitReader;
 #[doc = "Field `USICKPL` writer - USI Clock Polarity 0:Inactive=Low / 1:Inactive=High"]
-pub type UsickplW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type USICKPL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "USI Clock Source Select 2\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
-pub enum Usissel {
+pub enum USISSEL_A {
     #[doc = "0: USI Clock Source: 0"]
-    Usissel0 = 0,
+    USISSEL_0 = 0,
     #[doc = "1: USI Clock Source: 1"]
-    Usissel1 = 1,
+    USISSEL_1 = 1,
     #[doc = "2: USI Clock Source: 2"]
-    Usissel2 = 2,
+    USISSEL_2 = 2,
     #[doc = "3: USI Clock Source: 3"]
-    Usissel3 = 3,
+    USISSEL_3 = 3,
     #[doc = "4: USI Clock Source: 4"]
-    Usissel4 = 4,
+    USISSEL_4 = 4,
     #[doc = "5: USI Clock Source: 5"]
-    Usissel5 = 5,
+    USISSEL_5 = 5,
     #[doc = "6: USI Clock Source: 6"]
-    Usissel6 = 6,
+    USISSEL_6 = 6,
     #[doc = "7: USI Clock Source: 7"]
-    Usissel7 = 7,
+    USISSEL_7 = 7,
 }
-impl From<Usissel> for u8 {
+impl From<USISSEL_A> for u8 {
     #[inline(always)]
-    fn from(variant: Usissel) -> Self {
+    fn from(variant: USISSEL_A) -> Self {
         variant as _
     }
 }
-impl crate::FieldSpec for Usissel {
+impl crate::FieldSpec for USISSEL_A {
     type Ux = u8;
 }
-impl crate::IsEnum for Usissel {}
+impl crate::IsEnum for USISSEL_A {}
 #[doc = "Field `USISSEL` reader - USI Clock Source Select 2"]
-pub type UsisselR = crate::FieldReader<Usissel>;
-impl UsisselR {
+pub type USISSEL_R = crate::FieldReader<USISSEL_A>;
+impl USISSEL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Usissel {
+    pub const fn variant(&self) -> USISSEL_A {
         match self.bits {
-            0 => Usissel::Usissel0,
-            1 => Usissel::Usissel1,
-            2 => Usissel::Usissel2,
-            3 => Usissel::Usissel3,
-            4 => Usissel::Usissel4,
-            5 => Usissel::Usissel5,
-            6 => Usissel::Usissel6,
-            7 => Usissel::Usissel7,
+            0 => USISSEL_A::USISSEL_0,
+            1 => USISSEL_A::USISSEL_1,
+            2 => USISSEL_A::USISSEL_2,
+            3 => USISSEL_A::USISSEL_3,
+            4 => USISSEL_A::USISSEL_4,
+            5 => USISSEL_A::USISSEL_5,
+            6 => USISSEL_A::USISSEL_6,
+            7 => USISSEL_A::USISSEL_7,
             _ => unreachable!(),
         }
     }
     #[doc = "USI Clock Source: 0"]
     #[inline(always)]
     pub fn is_usissel_0(&self) -> bool {
-        *self == Usissel::Usissel0
+        *self == USISSEL_A::USISSEL_0
     }
     #[doc = "USI Clock Source: 1"]
     #[inline(always)]
     pub fn is_usissel_1(&self) -> bool {
-        *self == Usissel::Usissel1
+        *self == USISSEL_A::USISSEL_1
     }
     #[doc = "USI Clock Source: 2"]
     #[inline(always)]
     pub fn is_usissel_2(&self) -> bool {
-        *self == Usissel::Usissel2
+        *self == USISSEL_A::USISSEL_2
     }
     #[doc = "USI Clock Source: 3"]
     #[inline(always)]
     pub fn is_usissel_3(&self) -> bool {
-        *self == Usissel::Usissel3
+        *self == USISSEL_A::USISSEL_3
     }
     #[doc = "USI Clock Source: 4"]
     #[inline(always)]
     pub fn is_usissel_4(&self) -> bool {
-        *self == Usissel::Usissel4
+        *self == USISSEL_A::USISSEL_4
     }
     #[doc = "USI Clock Source: 5"]
     #[inline(always)]
     pub fn is_usissel_5(&self) -> bool {
-        *self == Usissel::Usissel5
+        *self == USISSEL_A::USISSEL_5
     }
     #[doc = "USI Clock Source: 6"]
     #[inline(always)]
     pub fn is_usissel_6(&self) -> bool {
-        *self == Usissel::Usissel6
+        *self == USISSEL_A::USISSEL_6
     }
     #[doc = "USI Clock Source: 7"]
     #[inline(always)]
     pub fn is_usissel_7(&self) -> bool {
-        *self == Usissel::Usissel7
+        *self == USISSEL_A::USISSEL_7
     }
 }
 #[doc = "Field `USISSEL` writer - USI Clock Source Select 2"]
-pub type UsisselW<'a, REG> = crate::FieldWriter<'a, REG, 3, Usissel, crate::Safe>;
-impl<'a, REG> UsisselW<'a, REG>
+pub type USISSEL_W<'a, REG> = crate::FieldWriter<'a, REG, 3, USISSEL_A, crate::Safe>;
+impl<'a, REG> USISSEL_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -110,137 +110,137 @@ where
     #[doc = "USI Clock Source: 0"]
     #[inline(always)]
     pub fn usissel_0(self) -> &'a mut crate::W<REG> {
-        self.variant(Usissel::Usissel0)
+        self.variant(USISSEL_A::USISSEL_0)
     }
     #[doc = "USI Clock Source: 1"]
     #[inline(always)]
     pub fn usissel_1(self) -> &'a mut crate::W<REG> {
-        self.variant(Usissel::Usissel1)
+        self.variant(USISSEL_A::USISSEL_1)
     }
     #[doc = "USI Clock Source: 2"]
     #[inline(always)]
     pub fn usissel_2(self) -> &'a mut crate::W<REG> {
-        self.variant(Usissel::Usissel2)
+        self.variant(USISSEL_A::USISSEL_2)
     }
     #[doc = "USI Clock Source: 3"]
     #[inline(always)]
     pub fn usissel_3(self) -> &'a mut crate::W<REG> {
-        self.variant(Usissel::Usissel3)
+        self.variant(USISSEL_A::USISSEL_3)
     }
     #[doc = "USI Clock Source: 4"]
     #[inline(always)]
     pub fn usissel_4(self) -> &'a mut crate::W<REG> {
-        self.variant(Usissel::Usissel4)
+        self.variant(USISSEL_A::USISSEL_4)
     }
     #[doc = "USI Clock Source: 5"]
     #[inline(always)]
     pub fn usissel_5(self) -> &'a mut crate::W<REG> {
-        self.variant(Usissel::Usissel5)
+        self.variant(USISSEL_A::USISSEL_5)
     }
     #[doc = "USI Clock Source: 6"]
     #[inline(always)]
     pub fn usissel_6(self) -> &'a mut crate::W<REG> {
-        self.variant(Usissel::Usissel6)
+        self.variant(USISSEL_A::USISSEL_6)
     }
     #[doc = "USI Clock Source: 7"]
     #[inline(always)]
     pub fn usissel_7(self) -> &'a mut crate::W<REG> {
-        self.variant(Usissel::Usissel7)
+        self.variant(USISSEL_A::USISSEL_7)
     }
 }
 #[doc = "USI Clock Divider 2\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
-pub enum Usidiv {
+pub enum USIDIV_A {
     #[doc = "0: USI Clock Divider: 0"]
-    Usidiv0 = 0,
+    USIDIV_0 = 0,
     #[doc = "1: USI Clock Divider: 1"]
-    Usidiv1 = 1,
+    USIDIV_1 = 1,
     #[doc = "2: USI Clock Divider: 2"]
-    Usidiv2 = 2,
+    USIDIV_2 = 2,
     #[doc = "3: USI Clock Divider: 3"]
-    Usidiv3 = 3,
+    USIDIV_3 = 3,
     #[doc = "4: USI Clock Divider: 4"]
-    Usidiv4 = 4,
+    USIDIV_4 = 4,
     #[doc = "5: USI Clock Divider: 5"]
-    Usidiv5 = 5,
+    USIDIV_5 = 5,
     #[doc = "6: USI Clock Divider: 6"]
-    Usidiv6 = 6,
+    USIDIV_6 = 6,
     #[doc = "7: USI Clock Divider: 7"]
-    Usidiv7 = 7,
+    USIDIV_7 = 7,
 }
-impl From<Usidiv> for u8 {
+impl From<USIDIV_A> for u8 {
     #[inline(always)]
-    fn from(variant: Usidiv) -> Self {
+    fn from(variant: USIDIV_A) -> Self {
         variant as _
     }
 }
-impl crate::FieldSpec for Usidiv {
+impl crate::FieldSpec for USIDIV_A {
     type Ux = u8;
 }
-impl crate::IsEnum for Usidiv {}
+impl crate::IsEnum for USIDIV_A {}
 #[doc = "Field `USIDIV` reader - USI Clock Divider 2"]
-pub type UsidivR = crate::FieldReader<Usidiv>;
-impl UsidivR {
+pub type USIDIV_R = crate::FieldReader<USIDIV_A>;
+impl USIDIV_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Usidiv {
+    pub const fn variant(&self) -> USIDIV_A {
         match self.bits {
-            0 => Usidiv::Usidiv0,
-            1 => Usidiv::Usidiv1,
-            2 => Usidiv::Usidiv2,
-            3 => Usidiv::Usidiv3,
-            4 => Usidiv::Usidiv4,
-            5 => Usidiv::Usidiv5,
-            6 => Usidiv::Usidiv6,
-            7 => Usidiv::Usidiv7,
+            0 => USIDIV_A::USIDIV_0,
+            1 => USIDIV_A::USIDIV_1,
+            2 => USIDIV_A::USIDIV_2,
+            3 => USIDIV_A::USIDIV_3,
+            4 => USIDIV_A::USIDIV_4,
+            5 => USIDIV_A::USIDIV_5,
+            6 => USIDIV_A::USIDIV_6,
+            7 => USIDIV_A::USIDIV_7,
             _ => unreachable!(),
         }
     }
     #[doc = "USI Clock Divider: 0"]
     #[inline(always)]
     pub fn is_usidiv_0(&self) -> bool {
-        *self == Usidiv::Usidiv0
+        *self == USIDIV_A::USIDIV_0
     }
     #[doc = "USI Clock Divider: 1"]
     #[inline(always)]
     pub fn is_usidiv_1(&self) -> bool {
-        *self == Usidiv::Usidiv1
+        *self == USIDIV_A::USIDIV_1
     }
     #[doc = "USI Clock Divider: 2"]
     #[inline(always)]
     pub fn is_usidiv_2(&self) -> bool {
-        *self == Usidiv::Usidiv2
+        *self == USIDIV_A::USIDIV_2
     }
     #[doc = "USI Clock Divider: 3"]
     #[inline(always)]
     pub fn is_usidiv_3(&self) -> bool {
-        *self == Usidiv::Usidiv3
+        *self == USIDIV_A::USIDIV_3
     }
     #[doc = "USI Clock Divider: 4"]
     #[inline(always)]
     pub fn is_usidiv_4(&self) -> bool {
-        *self == Usidiv::Usidiv4
+        *self == USIDIV_A::USIDIV_4
     }
     #[doc = "USI Clock Divider: 5"]
     #[inline(always)]
     pub fn is_usidiv_5(&self) -> bool {
-        *self == Usidiv::Usidiv5
+        *self == USIDIV_A::USIDIV_5
     }
     #[doc = "USI Clock Divider: 6"]
     #[inline(always)]
     pub fn is_usidiv_6(&self) -> bool {
-        *self == Usidiv::Usidiv6
+        *self == USIDIV_A::USIDIV_6
     }
     #[doc = "USI Clock Divider: 7"]
     #[inline(always)]
     pub fn is_usidiv_7(&self) -> bool {
-        *self == Usidiv::Usidiv7
+        *self == USIDIV_A::USIDIV_7
     }
 }
 #[doc = "Field `USIDIV` writer - USI Clock Divider 2"]
-pub type UsidivW<'a, REG> = crate::FieldWriter<'a, REG, 3, Usidiv, crate::Safe>;
-impl<'a, REG> UsidivW<'a, REG>
+pub type USIDIV_W<'a, REG> = crate::FieldWriter<'a, REG, 3, USIDIV_A, crate::Safe>;
+impl<'a, REG> USIDIV_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -248,102 +248,102 @@ where
     #[doc = "USI Clock Divider: 0"]
     #[inline(always)]
     pub fn usidiv_0(self) -> &'a mut crate::W<REG> {
-        self.variant(Usidiv::Usidiv0)
+        self.variant(USIDIV_A::USIDIV_0)
     }
     #[doc = "USI Clock Divider: 1"]
     #[inline(always)]
     pub fn usidiv_1(self) -> &'a mut crate::W<REG> {
-        self.variant(Usidiv::Usidiv1)
+        self.variant(USIDIV_A::USIDIV_1)
     }
     #[doc = "USI Clock Divider: 2"]
     #[inline(always)]
     pub fn usidiv_2(self) -> &'a mut crate::W<REG> {
-        self.variant(Usidiv::Usidiv2)
+        self.variant(USIDIV_A::USIDIV_2)
     }
     #[doc = "USI Clock Divider: 3"]
     #[inline(always)]
     pub fn usidiv_3(self) -> &'a mut crate::W<REG> {
-        self.variant(Usidiv::Usidiv3)
+        self.variant(USIDIV_A::USIDIV_3)
     }
     #[doc = "USI Clock Divider: 4"]
     #[inline(always)]
     pub fn usidiv_4(self) -> &'a mut crate::W<REG> {
-        self.variant(Usidiv::Usidiv4)
+        self.variant(USIDIV_A::USIDIV_4)
     }
     #[doc = "USI Clock Divider: 5"]
     #[inline(always)]
     pub fn usidiv_5(self) -> &'a mut crate::W<REG> {
-        self.variant(Usidiv::Usidiv5)
+        self.variant(USIDIV_A::USIDIV_5)
     }
     #[doc = "USI Clock Divider: 6"]
     #[inline(always)]
     pub fn usidiv_6(self) -> &'a mut crate::W<REG> {
-        self.variant(Usidiv::Usidiv6)
+        self.variant(USIDIV_A::USIDIV_6)
     }
     #[doc = "USI Clock Divider: 7"]
     #[inline(always)]
     pub fn usidiv_7(self) -> &'a mut crate::W<REG> {
-        self.variant(Usidiv::Usidiv7)
+        self.variant(USIDIV_A::USIDIV_7)
     }
 }
 impl R {
     #[doc = "Bit 0 - USI Software Clock"]
     #[inline(always)]
-    pub fn usiswclk(&self) -> UsiswclkR {
-        UsiswclkR::new((self.bits & 1) != 0)
+    pub fn usiswclk(&self) -> USISWCLK_R {
+        USISWCLK_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - USI Clock Polarity 0:Inactive=Low / 1:Inactive=High"]
     #[inline(always)]
-    pub fn usickpl(&self) -> UsickplR {
-        UsickplR::new(((self.bits >> 1) & 1) != 0)
+    pub fn usickpl(&self) -> USICKPL_R {
+        USICKPL_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bits 2:4 - USI Clock Source Select 2"]
     #[inline(always)]
-    pub fn usissel(&self) -> UsisselR {
-        UsisselR::new((self.bits >> 2) & 7)
+    pub fn usissel(&self) -> USISSEL_R {
+        USISSEL_R::new((self.bits >> 2) & 7)
     }
     #[doc = "Bits 5:7 - USI Clock Divider 2"]
     #[inline(always)]
-    pub fn usidiv(&self) -> UsidivR {
-        UsidivR::new((self.bits >> 5) & 7)
+    pub fn usidiv(&self) -> USIDIV_R {
+        USIDIV_R::new((self.bits >> 5) & 7)
     }
 }
 impl W {
     #[doc = "Bit 0 - USI Software Clock"]
     #[inline(always)]
-    pub fn usiswclk(&mut self) -> UsiswclkW<UsickctlSpec> {
-        UsiswclkW::new(self, 0)
+    pub fn usiswclk(&mut self) -> USISWCLK_W<USICKCTL_SPEC> {
+        USISWCLK_W::new(self, 0)
     }
     #[doc = "Bit 1 - USI Clock Polarity 0:Inactive=Low / 1:Inactive=High"]
     #[inline(always)]
-    pub fn usickpl(&mut self) -> UsickplW<UsickctlSpec> {
-        UsickplW::new(self, 1)
+    pub fn usickpl(&mut self) -> USICKPL_W<USICKCTL_SPEC> {
+        USICKPL_W::new(self, 1)
     }
     #[doc = "Bits 2:4 - USI Clock Source Select 2"]
     #[inline(always)]
-    pub fn usissel(&mut self) -> UsisselW<UsickctlSpec> {
-        UsisselW::new(self, 2)
+    pub fn usissel(&mut self) -> USISSEL_W<USICKCTL_SPEC> {
+        USISSEL_W::new(self, 2)
     }
     #[doc = "Bits 5:7 - USI Clock Divider 2"]
     #[inline(always)]
-    pub fn usidiv(&mut self) -> UsidivW<UsickctlSpec> {
-        UsidivW::new(self, 5)
+    pub fn usidiv(&mut self) -> USIDIV_W<USICKCTL_SPEC> {
+        USIDIV_W::new(self, 5)
     }
 }
 #[doc = "USI Clock Control Register\n\nYou can [`read`](crate::Reg::read) this register and get [`usickctl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`usickctl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct UsickctlSpec;
-impl crate::RegisterSpec for UsickctlSpec {
+pub struct USICKCTL_SPEC;
+impl crate::RegisterSpec for USICKCTL_SPEC {
     type Ux = u8;
 }
 #[doc = "`read()` method returns [`usickctl::R`](R) reader structure"]
-impl crate::Readable for UsickctlSpec {}
+impl crate::Readable for USICKCTL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`usickctl::W`](W) writer structure"]
-impl crate::Writable for UsickctlSpec {
+impl crate::Writable for USICKCTL_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
 }
 #[doc = "`reset()` method sets USICKCTL to value 0"]
-impl crate::Resettable for UsickctlSpec {
+impl crate::Resettable for USICKCTL_SPEC {
     const RESET_VALUE: u8 = 0;
 }

@@ -61,11 +61,11 @@ pub enum Interrupt {
     NMI = 14,
 }
 #[doc = "Special Function"]
-pub struct SpecialFunction {
+pub struct SPECIAL_FUNCTION {
     _marker: PhantomData<*const ()>,
 }
-unsafe impl Send for SpecialFunction {}
-impl SpecialFunction {
+unsafe impl Send for SPECIAL_FUNCTION {}
+impl SPECIAL_FUNCTION {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const special_function::RegisterBlock = 0 as *const _;
     #[doc = r"Return the pointer to the register block"]
@@ -92,26 +92,26 @@ impl SpecialFunction {
         }
     }
 }
-impl Deref for SpecialFunction {
+impl Deref for SPECIAL_FUNCTION {
     type Target = special_function::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
     }
 }
-impl core::fmt::Debug for SpecialFunction {
+impl core::fmt::Debug for SPECIAL_FUNCTION {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("SpecialFunction").finish()
+        f.debug_struct("SPECIAL_FUNCTION").finish()
     }
 }
 #[doc = "Special Function"]
 pub mod special_function;
 #[doc = "Port 1/2"]
-pub struct Port1_2 {
+pub struct PORT_1_2 {
     _marker: PhantomData<*const ()>,
 }
-unsafe impl Send for Port1_2 {}
-impl Port1_2 {
+unsafe impl Send for PORT_1_2 {}
+impl PORT_1_2 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const port_1_2::RegisterBlock = 0x20 as *const _;
     #[doc = r"Return the pointer to the register block"]
@@ -138,26 +138,26 @@ impl Port1_2 {
         }
     }
 }
-impl Deref for Port1_2 {
+impl Deref for PORT_1_2 {
     type Target = port_1_2::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
     }
 }
-impl core::fmt::Debug for Port1_2 {
+impl core::fmt::Debug for PORT_1_2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Port1_2").finish()
+        f.debug_struct("PORT_1_2").finish()
     }
 }
 #[doc = "Port 1/2"]
 pub mod port_1_2;
 #[doc = "System Clock"]
-pub struct SystemClock {
+pub struct SYSTEM_CLOCK {
     _marker: PhantomData<*const ()>,
 }
-unsafe impl Send for SystemClock {}
-impl SystemClock {
+unsafe impl Send for SYSTEM_CLOCK {}
+impl SYSTEM_CLOCK {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const system_clock::RegisterBlock = 0x52 as *const _;
     #[doc = r"Return the pointer to the register block"]
@@ -184,26 +184,26 @@ impl SystemClock {
         }
     }
 }
-impl Deref for SystemClock {
+impl Deref for SYSTEM_CLOCK {
     type Target = system_clock::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
     }
 }
-impl core::fmt::Debug for SystemClock {
+impl core::fmt::Debug for SYSTEM_CLOCK {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("SystemClock").finish()
+        f.debug_struct("SYSTEM_CLOCK").finish()
     }
 }
 #[doc = "System Clock"]
 pub mod system_clock;
 #[doc = "Calibration Data"]
-pub struct CalibrationData {
+pub struct CALIBRATION_DATA {
     _marker: PhantomData<*const ()>,
 }
-unsafe impl Send for CalibrationData {}
-impl CalibrationData {
+unsafe impl Send for CALIBRATION_DATA {}
+impl CALIBRATION_DATA {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const calibration_data::RegisterBlock = 0x10fe as *const _;
     #[doc = r"Return the pointer to the register block"]
@@ -230,26 +230,26 @@ impl CalibrationData {
         }
     }
 }
-impl Deref for CalibrationData {
+impl Deref for CALIBRATION_DATA {
     type Target = calibration_data::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
     }
 }
-impl core::fmt::Debug for CalibrationData {
+impl core::fmt::Debug for CALIBRATION_DATA {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("CalibrationData").finish()
+        f.debug_struct("CALIBRATION_DATA").finish()
     }
 }
 #[doc = "Calibration Data"]
 pub mod calibration_data;
 #[doc = "Watchdog Timer"]
-pub struct WatchdogTimer {
+pub struct WATCHDOG_TIMER {
     _marker: PhantomData<*const ()>,
 }
-unsafe impl Send for WatchdogTimer {}
-impl WatchdogTimer {
+unsafe impl Send for WATCHDOG_TIMER {}
+impl WATCHDOG_TIMER {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const watchdog_timer::RegisterBlock = 0x0120 as *const _;
     #[doc = r"Return the pointer to the register block"]
@@ -276,26 +276,26 @@ impl WatchdogTimer {
         }
     }
 }
-impl Deref for WatchdogTimer {
+impl Deref for WATCHDOG_TIMER {
     type Target = watchdog_timer::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
     }
 }
-impl core::fmt::Debug for WatchdogTimer {
+impl core::fmt::Debug for WATCHDOG_TIMER {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("WatchdogTimer").finish()
+        f.debug_struct("WATCHDOG_TIMER").finish()
     }
 }
 #[doc = "Watchdog Timer"]
 pub mod watchdog_timer;
 #[doc = "Flash"]
-pub struct Flash {
+pub struct FLASH {
     _marker: PhantomData<*const ()>,
 }
-unsafe impl Send for Flash {}
-impl Flash {
+unsafe impl Send for FLASH {}
+impl FLASH {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const flash::RegisterBlock = 0x0128 as *const _;
     #[doc = r"Return the pointer to the register block"]
@@ -322,26 +322,26 @@ impl Flash {
         }
     }
 }
-impl Deref for Flash {
+impl Deref for FLASH {
     type Target = flash::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
     }
 }
-impl core::fmt::Debug for Flash {
+impl core::fmt::Debug for FLASH {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Flash").finish()
+        f.debug_struct("FLASH").finish()
     }
 }
 #[doc = "Flash"]
 pub mod flash;
 #[doc = "Timer A2"]
-pub struct TimerA2 {
+pub struct TIMER_A2 {
     _marker: PhantomData<*const ()>,
 }
-unsafe impl Send for TimerA2 {}
-impl TimerA2 {
+unsafe impl Send for TIMER_A2 {}
+impl TIMER_A2 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const timer_a2::RegisterBlock = 0x012e as *const _;
     #[doc = r"Return the pointer to the register block"]
@@ -368,16 +368,16 @@ impl TimerA2 {
         }
     }
 }
-impl Deref for TimerA2 {
+impl Deref for TIMER_A2 {
     type Target = timer_a2::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
     }
 }
-impl core::fmt::Debug for TimerA2 {
+impl core::fmt::Debug for TIMER_A2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("TimerA2").finish()
+        f.debug_struct("TIMER_A2").finish()
     }
 }
 #[doc = "Timer A2"]
@@ -388,19 +388,19 @@ static mut DEVICE_PERIPHERALS: bool = false;
 #[allow(non_snake_case)]
 pub struct Peripherals {
     #[doc = "SPECIAL_FUNCTION"]
-    pub special_function: SpecialFunction,
+    pub SPECIAL_FUNCTION: SPECIAL_FUNCTION,
     #[doc = "PORT_1_2"]
-    pub port_1_2: Port1_2,
+    pub PORT_1_2: PORT_1_2,
     #[doc = "SYSTEM_CLOCK"]
-    pub system_clock: SystemClock,
+    pub SYSTEM_CLOCK: SYSTEM_CLOCK,
     #[doc = "CALIBRATION_DATA"]
-    pub calibration_data: CalibrationData,
+    pub CALIBRATION_DATA: CALIBRATION_DATA,
     #[doc = "WATCHDOG_TIMER"]
-    pub watchdog_timer: WatchdogTimer,
+    pub WATCHDOG_TIMER: WATCHDOG_TIMER,
     #[doc = "FLASH"]
-    pub flash: Flash,
+    pub FLASH: FLASH,
     #[doc = "TIMER_A2"]
-    pub timer_a2: TimerA2,
+    pub TIMER_A2: TIMER_A2,
 }
 impl Peripherals {
     #[doc = r" Returns all the peripherals *once*."]
@@ -423,13 +423,13 @@ impl Peripherals {
     pub unsafe fn steal() -> Self {
         DEVICE_PERIPHERALS = true;
         Peripherals {
-            special_function: SpecialFunction::steal(),
-            port_1_2: Port1_2::steal(),
-            system_clock: SystemClock::steal(),
-            calibration_data: CalibrationData::steal(),
-            watchdog_timer: WatchdogTimer::steal(),
-            flash: Flash::steal(),
-            timer_a2: TimerA2::steal(),
+            SPECIAL_FUNCTION: SPECIAL_FUNCTION::steal(),
+            PORT_1_2: PORT_1_2::steal(),
+            SYSTEM_CLOCK: SYSTEM_CLOCK::steal(),
+            CALIBRATION_DATA: CALIBRATION_DATA::steal(),
+            WATCHDOG_TIMER: WATCHDOG_TIMER::steal(),
+            FLASH: FLASH::steal(),
+            TIMER_A2: TIMER_A2::steal(),
         }
     }
 }

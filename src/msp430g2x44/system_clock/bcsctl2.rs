@@ -1,72 +1,72 @@
 #[doc = "Register `BCSCTL2` reader"]
-pub type R = crate::R<Bcsctl2Spec>;
+pub type R = crate::R<BCSCTL2_SPEC>;
 #[doc = "Register `BCSCTL2` writer"]
-pub type W = crate::W<Bcsctl2Spec>;
+pub type W = crate::W<BCSCTL2_SPEC>;
 #[doc = "Field `DCOR` reader - Enable External Resistor : 1"]
-pub type DcorR = crate::BitReader;
+pub type DCOR_R = crate::BitReader;
 #[doc = "Field `DCOR` writer - Enable External Resistor : 1"]
-pub type DcorW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type DCOR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "SMCLK Divider 0\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
-pub enum Divs {
+pub enum DIVS_A {
     #[doc = "0: SMCLK Divider 0: /1"]
-    Divs0 = 0,
+    DIVS_0 = 0,
     #[doc = "1: SMCLK Divider 1: /2"]
-    Divs1 = 1,
+    DIVS_1 = 1,
     #[doc = "2: SMCLK Divider 2: /4"]
-    Divs2 = 2,
+    DIVS_2 = 2,
     #[doc = "3: SMCLK Divider 3: /8"]
-    Divs3 = 3,
+    DIVS_3 = 3,
 }
-impl From<Divs> for u8 {
+impl From<DIVS_A> for u8 {
     #[inline(always)]
-    fn from(variant: Divs) -> Self {
+    fn from(variant: DIVS_A) -> Self {
         variant as _
     }
 }
-impl crate::FieldSpec for Divs {
+impl crate::FieldSpec for DIVS_A {
     type Ux = u8;
 }
-impl crate::IsEnum for Divs {}
+impl crate::IsEnum for DIVS_A {}
 #[doc = "Field `DIVS` reader - SMCLK Divider 0"]
-pub type DivsR = crate::FieldReader<Divs>;
-impl DivsR {
+pub type DIVS_R = crate::FieldReader<DIVS_A>;
+impl DIVS_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Divs {
+    pub const fn variant(&self) -> DIVS_A {
         match self.bits {
-            0 => Divs::Divs0,
-            1 => Divs::Divs1,
-            2 => Divs::Divs2,
-            3 => Divs::Divs3,
+            0 => DIVS_A::DIVS_0,
+            1 => DIVS_A::DIVS_1,
+            2 => DIVS_A::DIVS_2,
+            3 => DIVS_A::DIVS_3,
             _ => unreachable!(),
         }
     }
     #[doc = "SMCLK Divider 0: /1"]
     #[inline(always)]
     pub fn is_divs_0(&self) -> bool {
-        *self == Divs::Divs0
+        *self == DIVS_A::DIVS_0
     }
     #[doc = "SMCLK Divider 1: /2"]
     #[inline(always)]
     pub fn is_divs_1(&self) -> bool {
-        *self == Divs::Divs1
+        *self == DIVS_A::DIVS_1
     }
     #[doc = "SMCLK Divider 2: /4"]
     #[inline(always)]
     pub fn is_divs_2(&self) -> bool {
-        *self == Divs::Divs2
+        *self == DIVS_A::DIVS_2
     }
     #[doc = "SMCLK Divider 3: /8"]
     #[inline(always)]
     pub fn is_divs_3(&self) -> bool {
-        *self == Divs::Divs3
+        *self == DIVS_A::DIVS_3
     }
 }
 #[doc = "Field `DIVS` writer - SMCLK Divider 0"]
-pub type DivsW<'a, REG> = crate::FieldWriter<'a, REG, 2, Divs, crate::Safe>;
-impl<'a, REG> DivsW<'a, REG>
+pub type DIVS_W<'a, REG> = crate::FieldWriter<'a, REG, 2, DIVS_A, crate::Safe>;
+impl<'a, REG> DIVS_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -74,89 +74,89 @@ where
     #[doc = "SMCLK Divider 0: /1"]
     #[inline(always)]
     pub fn divs_0(self) -> &'a mut crate::W<REG> {
-        self.variant(Divs::Divs0)
+        self.variant(DIVS_A::DIVS_0)
     }
     #[doc = "SMCLK Divider 1: /2"]
     #[inline(always)]
     pub fn divs_1(self) -> &'a mut crate::W<REG> {
-        self.variant(Divs::Divs1)
+        self.variant(DIVS_A::DIVS_1)
     }
     #[doc = "SMCLK Divider 2: /4"]
     #[inline(always)]
     pub fn divs_2(self) -> &'a mut crate::W<REG> {
-        self.variant(Divs::Divs2)
+        self.variant(DIVS_A::DIVS_2)
     }
     #[doc = "SMCLK Divider 3: /8"]
     #[inline(always)]
     pub fn divs_3(self) -> &'a mut crate::W<REG> {
-        self.variant(Divs::Divs3)
+        self.variant(DIVS_A::DIVS_3)
     }
 }
 #[doc = "Field `SELS` reader - SMCLK Source Select 0:DCOCLK / 1:XT2CLK/LFXTCLK"]
-pub type SelsR = crate::BitReader;
+pub type SELS_R = crate::BitReader;
 #[doc = "Field `SELS` writer - SMCLK Source Select 0:DCOCLK / 1:XT2CLK/LFXTCLK"]
-pub type SelsW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type SELS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "MCLK Divider 0\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
-pub enum Divm {
+pub enum DIVM_A {
     #[doc = "0: MCLK Divider 0: /1"]
-    Divm0 = 0,
+    DIVM_0 = 0,
     #[doc = "1: MCLK Divider 1: /2"]
-    Divm1 = 1,
+    DIVM_1 = 1,
     #[doc = "2: MCLK Divider 2: /4"]
-    Divm2 = 2,
+    DIVM_2 = 2,
     #[doc = "3: MCLK Divider 3: /8"]
-    Divm3 = 3,
+    DIVM_3 = 3,
 }
-impl From<Divm> for u8 {
+impl From<DIVM_A> for u8 {
     #[inline(always)]
-    fn from(variant: Divm) -> Self {
+    fn from(variant: DIVM_A) -> Self {
         variant as _
     }
 }
-impl crate::FieldSpec for Divm {
+impl crate::FieldSpec for DIVM_A {
     type Ux = u8;
 }
-impl crate::IsEnum for Divm {}
+impl crate::IsEnum for DIVM_A {}
 #[doc = "Field `DIVM` reader - MCLK Divider 0"]
-pub type DivmR = crate::FieldReader<Divm>;
-impl DivmR {
+pub type DIVM_R = crate::FieldReader<DIVM_A>;
+impl DIVM_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Divm {
+    pub const fn variant(&self) -> DIVM_A {
         match self.bits {
-            0 => Divm::Divm0,
-            1 => Divm::Divm1,
-            2 => Divm::Divm2,
-            3 => Divm::Divm3,
+            0 => DIVM_A::DIVM_0,
+            1 => DIVM_A::DIVM_1,
+            2 => DIVM_A::DIVM_2,
+            3 => DIVM_A::DIVM_3,
             _ => unreachable!(),
         }
     }
     #[doc = "MCLK Divider 0: /1"]
     #[inline(always)]
     pub fn is_divm_0(&self) -> bool {
-        *self == Divm::Divm0
+        *self == DIVM_A::DIVM_0
     }
     #[doc = "MCLK Divider 1: /2"]
     #[inline(always)]
     pub fn is_divm_1(&self) -> bool {
-        *self == Divm::Divm1
+        *self == DIVM_A::DIVM_1
     }
     #[doc = "MCLK Divider 2: /4"]
     #[inline(always)]
     pub fn is_divm_2(&self) -> bool {
-        *self == Divm::Divm2
+        *self == DIVM_A::DIVM_2
     }
     #[doc = "MCLK Divider 3: /8"]
     #[inline(always)]
     pub fn is_divm_3(&self) -> bool {
-        *self == Divm::Divm3
+        *self == DIVM_A::DIVM_3
     }
 }
 #[doc = "Field `DIVM` writer - MCLK Divider 0"]
-pub type DivmW<'a, REG> = crate::FieldWriter<'a, REG, 2, Divm, crate::Safe>;
-impl<'a, REG> DivmW<'a, REG>
+pub type DIVM_W<'a, REG> = crate::FieldWriter<'a, REG, 2, DIVM_A, crate::Safe>;
+impl<'a, REG> DIVM_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -164,85 +164,85 @@ where
     #[doc = "MCLK Divider 0: /1"]
     #[inline(always)]
     pub fn divm_0(self) -> &'a mut crate::W<REG> {
-        self.variant(Divm::Divm0)
+        self.variant(DIVM_A::DIVM_0)
     }
     #[doc = "MCLK Divider 1: /2"]
     #[inline(always)]
     pub fn divm_1(self) -> &'a mut crate::W<REG> {
-        self.variant(Divm::Divm1)
+        self.variant(DIVM_A::DIVM_1)
     }
     #[doc = "MCLK Divider 2: /4"]
     #[inline(always)]
     pub fn divm_2(self) -> &'a mut crate::W<REG> {
-        self.variant(Divm::Divm2)
+        self.variant(DIVM_A::DIVM_2)
     }
     #[doc = "MCLK Divider 3: /8"]
     #[inline(always)]
     pub fn divm_3(self) -> &'a mut crate::W<REG> {
-        self.variant(Divm::Divm3)
+        self.variant(DIVM_A::DIVM_3)
     }
 }
 #[doc = "MCLK Source Select 0\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
-pub enum Selm {
+pub enum SELM_A {
     #[doc = "0: MCLK Source Select 0: DCOCLK"]
-    Selm0 = 0,
+    SELM_0 = 0,
     #[doc = "1: MCLK Source Select 1: DCOCLK"]
-    Selm1 = 1,
+    SELM_1 = 1,
     #[doc = "2: MCLK Source Select 2: XT2CLK/LFXTCLK"]
-    Selm2 = 2,
+    SELM_2 = 2,
     #[doc = "3: MCLK Source Select 3: LFXTCLK"]
-    Selm3 = 3,
+    SELM_3 = 3,
 }
-impl From<Selm> for u8 {
+impl From<SELM_A> for u8 {
     #[inline(always)]
-    fn from(variant: Selm) -> Self {
+    fn from(variant: SELM_A) -> Self {
         variant as _
     }
 }
-impl crate::FieldSpec for Selm {
+impl crate::FieldSpec for SELM_A {
     type Ux = u8;
 }
-impl crate::IsEnum for Selm {}
+impl crate::IsEnum for SELM_A {}
 #[doc = "Field `SELM` reader - MCLK Source Select 0"]
-pub type SelmR = crate::FieldReader<Selm>;
-impl SelmR {
+pub type SELM_R = crate::FieldReader<SELM_A>;
+impl SELM_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Selm {
+    pub const fn variant(&self) -> SELM_A {
         match self.bits {
-            0 => Selm::Selm0,
-            1 => Selm::Selm1,
-            2 => Selm::Selm2,
-            3 => Selm::Selm3,
+            0 => SELM_A::SELM_0,
+            1 => SELM_A::SELM_1,
+            2 => SELM_A::SELM_2,
+            3 => SELM_A::SELM_3,
             _ => unreachable!(),
         }
     }
     #[doc = "MCLK Source Select 0: DCOCLK"]
     #[inline(always)]
     pub fn is_selm_0(&self) -> bool {
-        *self == Selm::Selm0
+        *self == SELM_A::SELM_0
     }
     #[doc = "MCLK Source Select 1: DCOCLK"]
     #[inline(always)]
     pub fn is_selm_1(&self) -> bool {
-        *self == Selm::Selm1
+        *self == SELM_A::SELM_1
     }
     #[doc = "MCLK Source Select 2: XT2CLK/LFXTCLK"]
     #[inline(always)]
     pub fn is_selm_2(&self) -> bool {
-        *self == Selm::Selm2
+        *self == SELM_A::SELM_2
     }
     #[doc = "MCLK Source Select 3: LFXTCLK"]
     #[inline(always)]
     pub fn is_selm_3(&self) -> bool {
-        *self == Selm::Selm3
+        *self == SELM_A::SELM_3
     }
 }
 #[doc = "Field `SELM` writer - MCLK Source Select 0"]
-pub type SelmW<'a, REG> = crate::FieldWriter<'a, REG, 2, Selm, crate::Safe>;
-impl<'a, REG> SelmW<'a, REG>
+pub type SELM_W<'a, REG> = crate::FieldWriter<'a, REG, 2, SELM_A, crate::Safe>;
+impl<'a, REG> SELM_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -250,92 +250,92 @@ where
     #[doc = "MCLK Source Select 0: DCOCLK"]
     #[inline(always)]
     pub fn selm_0(self) -> &'a mut crate::W<REG> {
-        self.variant(Selm::Selm0)
+        self.variant(SELM_A::SELM_0)
     }
     #[doc = "MCLK Source Select 1: DCOCLK"]
     #[inline(always)]
     pub fn selm_1(self) -> &'a mut crate::W<REG> {
-        self.variant(Selm::Selm1)
+        self.variant(SELM_A::SELM_1)
     }
     #[doc = "MCLK Source Select 2: XT2CLK/LFXTCLK"]
     #[inline(always)]
     pub fn selm_2(self) -> &'a mut crate::W<REG> {
-        self.variant(Selm::Selm2)
+        self.variant(SELM_A::SELM_2)
     }
     #[doc = "MCLK Source Select 3: LFXTCLK"]
     #[inline(always)]
     pub fn selm_3(self) -> &'a mut crate::W<REG> {
-        self.variant(Selm::Selm3)
+        self.variant(SELM_A::SELM_3)
     }
 }
 impl R {
     #[doc = "Bit 0 - Enable External Resistor : 1"]
     #[inline(always)]
-    pub fn dcor(&self) -> DcorR {
-        DcorR::new((self.bits & 1) != 0)
+    pub fn dcor(&self) -> DCOR_R {
+        DCOR_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bits 1:2 - SMCLK Divider 0"]
     #[inline(always)]
-    pub fn divs(&self) -> DivsR {
-        DivsR::new((self.bits >> 1) & 3)
+    pub fn divs(&self) -> DIVS_R {
+        DIVS_R::new((self.bits >> 1) & 3)
     }
     #[doc = "Bit 3 - SMCLK Source Select 0:DCOCLK / 1:XT2CLK/LFXTCLK"]
     #[inline(always)]
-    pub fn sels(&self) -> SelsR {
-        SelsR::new(((self.bits >> 3) & 1) != 0)
+    pub fn sels(&self) -> SELS_R {
+        SELS_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bits 4:5 - MCLK Divider 0"]
     #[inline(always)]
-    pub fn divm(&self) -> DivmR {
-        DivmR::new((self.bits >> 4) & 3)
+    pub fn divm(&self) -> DIVM_R {
+        DIVM_R::new((self.bits >> 4) & 3)
     }
     #[doc = "Bits 6:7 - MCLK Source Select 0"]
     #[inline(always)]
-    pub fn selm(&self) -> SelmR {
-        SelmR::new((self.bits >> 6) & 3)
+    pub fn selm(&self) -> SELM_R {
+        SELM_R::new((self.bits >> 6) & 3)
     }
 }
 impl W {
     #[doc = "Bit 0 - Enable External Resistor : 1"]
     #[inline(always)]
-    pub fn dcor(&mut self) -> DcorW<Bcsctl2Spec> {
-        DcorW::new(self, 0)
+    pub fn dcor(&mut self) -> DCOR_W<BCSCTL2_SPEC> {
+        DCOR_W::new(self, 0)
     }
     #[doc = "Bits 1:2 - SMCLK Divider 0"]
     #[inline(always)]
-    pub fn divs(&mut self) -> DivsW<Bcsctl2Spec> {
-        DivsW::new(self, 1)
+    pub fn divs(&mut self) -> DIVS_W<BCSCTL2_SPEC> {
+        DIVS_W::new(self, 1)
     }
     #[doc = "Bit 3 - SMCLK Source Select 0:DCOCLK / 1:XT2CLK/LFXTCLK"]
     #[inline(always)]
-    pub fn sels(&mut self) -> SelsW<Bcsctl2Spec> {
-        SelsW::new(self, 3)
+    pub fn sels(&mut self) -> SELS_W<BCSCTL2_SPEC> {
+        SELS_W::new(self, 3)
     }
     #[doc = "Bits 4:5 - MCLK Divider 0"]
     #[inline(always)]
-    pub fn divm(&mut self) -> DivmW<Bcsctl2Spec> {
-        DivmW::new(self, 4)
+    pub fn divm(&mut self) -> DIVM_W<BCSCTL2_SPEC> {
+        DIVM_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - MCLK Source Select 0"]
     #[inline(always)]
-    pub fn selm(&mut self) -> SelmW<Bcsctl2Spec> {
-        SelmW::new(self, 6)
+    pub fn selm(&mut self) -> SELM_W<BCSCTL2_SPEC> {
+        SELM_W::new(self, 6)
     }
 }
 #[doc = "Basic Clock System Control 2\n\nYou can [`read`](crate::Reg::read) this register and get [`bcsctl2::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`bcsctl2::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct Bcsctl2Spec;
-impl crate::RegisterSpec for Bcsctl2Spec {
+pub struct BCSCTL2_SPEC;
+impl crate::RegisterSpec for BCSCTL2_SPEC {
     type Ux = u8;
 }
 #[doc = "`read()` method returns [`bcsctl2::R`](R) reader structure"]
-impl crate::Readable for Bcsctl2Spec {}
+impl crate::Readable for BCSCTL2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`bcsctl2::W`](W) writer structure"]
-impl crate::Writable for Bcsctl2Spec {
+impl crate::Writable for BCSCTL2_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
 }
 #[doc = "`reset()` method sets BCSCTL2 to value 0"]
-impl crate::Resettable for Bcsctl2Spec {
+impl crate::Resettable for BCSCTL2_SPEC {
     const RESET_VALUE: u8 = 0;
 }

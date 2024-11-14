@@ -93,11 +93,11 @@ pub enum Interrupt {
     NMI = 14,
 }
 #[doc = "Special Function"]
-pub struct SpecialFunction {
+pub struct SPECIAL_FUNCTION {
     _marker: PhantomData<*const ()>,
 }
-unsafe impl Send for SpecialFunction {}
-impl SpecialFunction {
+unsafe impl Send for SPECIAL_FUNCTION {}
+impl SPECIAL_FUNCTION {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const special_function::RegisterBlock = 0 as *const _;
     #[doc = r"Return the pointer to the register block"]
@@ -124,26 +124,26 @@ impl SpecialFunction {
         }
     }
 }
-impl Deref for SpecialFunction {
+impl Deref for SPECIAL_FUNCTION {
     type Target = special_function::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
     }
 }
-impl core::fmt::Debug for SpecialFunction {
+impl core::fmt::Debug for SPECIAL_FUNCTION {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("SpecialFunction").finish()
+        f.debug_struct("SPECIAL_FUNCTION").finish()
     }
 }
 #[doc = "Special Function"]
 pub mod special_function;
 #[doc = "Port 3/4"]
-pub struct Port3_4 {
+pub struct PORT_3_4 {
     _marker: PhantomData<*const ()>,
 }
-unsafe impl Send for Port3_4 {}
-impl Port3_4 {
+unsafe impl Send for PORT_3_4 {}
+impl PORT_3_4 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const port_3_4::RegisterBlock = 0x10 as *const _;
     #[doc = r"Return the pointer to the register block"]
@@ -170,26 +170,26 @@ impl Port3_4 {
         }
     }
 }
-impl Deref for Port3_4 {
+impl Deref for PORT_3_4 {
     type Target = port_3_4::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
     }
 }
-impl core::fmt::Debug for Port3_4 {
+impl core::fmt::Debug for PORT_3_4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Port3_4").finish()
+        f.debug_struct("PORT_3_4").finish()
     }
 }
 #[doc = "Port 3/4"]
 pub mod port_3_4;
 #[doc = "Port 1/2"]
-pub struct Port1_2 {
+pub struct PORT_1_2 {
     _marker: PhantomData<*const ()>,
 }
-unsafe impl Send for Port1_2 {}
-impl Port1_2 {
+unsafe impl Send for PORT_1_2 {}
+impl PORT_1_2 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const port_1_2::RegisterBlock = 0x20 as *const _;
     #[doc = r"Return the pointer to the register block"]
@@ -216,26 +216,26 @@ impl Port1_2 {
         }
     }
 }
-impl Deref for Port1_2 {
+impl Deref for PORT_1_2 {
     type Target = port_1_2::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
     }
 }
-impl core::fmt::Debug for Port1_2 {
+impl core::fmt::Debug for PORT_1_2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Port1_2").finish()
+        f.debug_struct("PORT_1_2").finish()
     }
 }
 #[doc = "Port 1/2"]
 pub mod port_1_2;
 #[doc = "System Clock"]
-pub struct SystemClock {
+pub struct SYSTEM_CLOCK {
     _marker: PhantomData<*const ()>,
 }
-unsafe impl Send for SystemClock {}
-impl SystemClock {
+unsafe impl Send for SYSTEM_CLOCK {}
+impl SYSTEM_CLOCK {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const system_clock::RegisterBlock = 0x52 as *const _;
     #[doc = r"Return the pointer to the register block"]
@@ -262,26 +262,26 @@ impl SystemClock {
         }
     }
 }
-impl Deref for SystemClock {
+impl Deref for SYSTEM_CLOCK {
     type Target = system_clock::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
     }
 }
-impl core::fmt::Debug for SystemClock {
+impl core::fmt::Debug for SYSTEM_CLOCK {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("SystemClock").finish()
+        f.debug_struct("SYSTEM_CLOCK").finish()
     }
 }
 #[doc = "System Clock"]
 pub mod system_clock;
 #[doc = "Comparator A"]
-pub struct ComparatorA {
+pub struct COMPARATOR_A {
     _marker: PhantomData<*const ()>,
 }
-unsafe impl Send for ComparatorA {}
-impl ComparatorA {
+unsafe impl Send for COMPARATOR_A {}
+impl COMPARATOR_A {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const comparator_a::RegisterBlock = 0x58 as *const _;
     #[doc = r"Return the pointer to the register block"]
@@ -308,26 +308,26 @@ impl ComparatorA {
         }
     }
 }
-impl Deref for ComparatorA {
+impl Deref for COMPARATOR_A {
     type Target = comparator_a::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
     }
 }
-impl core::fmt::Debug for ComparatorA {
+impl core::fmt::Debug for COMPARATOR_A {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("ComparatorA").finish()
+        f.debug_struct("COMPARATOR_A").finish()
     }
 }
 #[doc = "Comparator A"]
 pub mod comparator_a;
 #[doc = "USCI_A0 UART Mode"]
-pub struct UsciA0UartMode {
+pub struct USCI_A0_UART_MODE {
     _marker: PhantomData<*const ()>,
 }
-unsafe impl Send for UsciA0UartMode {}
-impl UsciA0UartMode {
+unsafe impl Send for USCI_A0_UART_MODE {}
+impl USCI_A0_UART_MODE {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const usci_a0_uart_mode::RegisterBlock = 0x5c as *const _;
     #[doc = r"Return the pointer to the register block"]
@@ -354,26 +354,26 @@ impl UsciA0UartMode {
         }
     }
 }
-impl Deref for UsciA0UartMode {
+impl Deref for USCI_A0_UART_MODE {
     type Target = usci_a0_uart_mode::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
     }
 }
-impl core::fmt::Debug for UsciA0UartMode {
+impl core::fmt::Debug for USCI_A0_UART_MODE {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("UsciA0UartMode").finish()
+        f.debug_struct("USCI_A0_UART_MODE").finish()
     }
 }
 #[doc = "USCI_A0 UART Mode"]
 pub mod usci_a0_uart_mode;
 #[doc = "USCI_A0 SPI Mode"]
-pub struct UsciA0SpiMode {
+pub struct USCI_A0_SPI_MODE {
     _marker: PhantomData<*const ()>,
 }
-unsafe impl Send for UsciA0SpiMode {}
-impl UsciA0SpiMode {
+unsafe impl Send for USCI_A0_SPI_MODE {}
+impl USCI_A0_SPI_MODE {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const usci_a0_spi_mode::RegisterBlock = 0x60 as *const _;
     #[doc = r"Return the pointer to the register block"]
@@ -400,26 +400,26 @@ impl UsciA0SpiMode {
         }
     }
 }
-impl Deref for UsciA0SpiMode {
+impl Deref for USCI_A0_SPI_MODE {
     type Target = usci_a0_spi_mode::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
     }
 }
-impl core::fmt::Debug for UsciA0SpiMode {
+impl core::fmt::Debug for USCI_A0_SPI_MODE {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("UsciA0SpiMode").finish()
+        f.debug_struct("USCI_A0_SPI_MODE").finish()
     }
 }
 #[doc = "USCI_A0 SPI Mode"]
 pub mod usci_a0_spi_mode;
 #[doc = "USCI_B0 I2C Mode"]
-pub struct UsciB0I2cMode {
+pub struct USCI_B0_I2C_MODE {
     _marker: PhantomData<*const ()>,
 }
-unsafe impl Send for UsciB0I2cMode {}
-impl UsciB0I2cMode {
+unsafe impl Send for USCI_B0_I2C_MODE {}
+impl USCI_B0_I2C_MODE {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const usci_b0_i2c_mode::RegisterBlock = 0x68 as *const _;
     #[doc = r"Return the pointer to the register block"]
@@ -446,26 +446,26 @@ impl UsciB0I2cMode {
         }
     }
 }
-impl Deref for UsciB0I2cMode {
+impl Deref for USCI_B0_I2C_MODE {
     type Target = usci_b0_i2c_mode::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
     }
 }
-impl core::fmt::Debug for UsciB0I2cMode {
+impl core::fmt::Debug for USCI_B0_I2C_MODE {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("UsciB0I2cMode").finish()
+        f.debug_struct("USCI_B0_I2C_MODE").finish()
     }
 }
 #[doc = "USCI_B0 I2C Mode"]
 pub mod usci_b0_i2c_mode;
 #[doc = "USCI_B0 SPI Mode"]
-pub struct UsciB0SpiMode {
+pub struct USCI_B0_SPI_MODE {
     _marker: PhantomData<*const ()>,
 }
-unsafe impl Send for UsciB0SpiMode {}
-impl UsciB0SpiMode {
+unsafe impl Send for USCI_B0_SPI_MODE {}
+impl USCI_B0_SPI_MODE {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const usci_b0_spi_mode::RegisterBlock = 0x68 as *const _;
     #[doc = r"Return the pointer to the register block"]
@@ -492,26 +492,26 @@ impl UsciB0SpiMode {
         }
     }
 }
-impl Deref for UsciB0SpiMode {
+impl Deref for USCI_B0_SPI_MODE {
     type Target = usci_b0_spi_mode::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
     }
 }
-impl core::fmt::Debug for UsciB0SpiMode {
+impl core::fmt::Debug for USCI_B0_SPI_MODE {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("UsciB0SpiMode").finish()
+        f.debug_struct("USCI_B0_SPI_MODE").finish()
     }
 }
 #[doc = "USCI_B0 SPI Mode"]
 pub mod usci_b0_spi_mode;
 #[doc = "TLV Calibration Data"]
-pub struct TlvCalibrationData {
+pub struct TLV_CALIBRATION_DATA {
     _marker: PhantomData<*const ()>,
 }
-unsafe impl Send for TlvCalibrationData {}
-impl TlvCalibrationData {
+unsafe impl Send for TLV_CALIBRATION_DATA {}
+impl TLV_CALIBRATION_DATA {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const tlv_calibration_data::RegisterBlock = 0x10c0 as *const _;
     #[doc = r"Return the pointer to the register block"]
@@ -538,26 +538,26 @@ impl TlvCalibrationData {
         }
     }
 }
-impl Deref for TlvCalibrationData {
+impl Deref for TLV_CALIBRATION_DATA {
     type Target = tlv_calibration_data::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
     }
 }
-impl core::fmt::Debug for TlvCalibrationData {
+impl core::fmt::Debug for TLV_CALIBRATION_DATA {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("TlvCalibrationData").finish()
+        f.debug_struct("TLV_CALIBRATION_DATA").finish()
     }
 }
 #[doc = "TLV Calibration Data"]
 pub mod tlv_calibration_data;
 #[doc = "Calibration Data"]
-pub struct CalibrationData {
+pub struct CALIBRATION_DATA {
     _marker: PhantomData<*const ()>,
 }
-unsafe impl Send for CalibrationData {}
-impl CalibrationData {
+unsafe impl Send for CALIBRATION_DATA {}
+impl CALIBRATION_DATA {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const calibration_data::RegisterBlock = 0x10f8 as *const _;
     #[doc = r"Return the pointer to the register block"]
@@ -584,26 +584,26 @@ impl CalibrationData {
         }
     }
 }
-impl Deref for CalibrationData {
+impl Deref for CALIBRATION_DATA {
     type Target = calibration_data::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
     }
 }
-impl core::fmt::Debug for CalibrationData {
+impl core::fmt::Debug for CALIBRATION_DATA {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("CalibrationData").finish()
+        f.debug_struct("CALIBRATION_DATA").finish()
     }
 }
 #[doc = "Calibration Data"]
 pub mod calibration_data;
 #[doc = "Timer A3"]
-pub struct Timer0A3 {
+pub struct TIMER0_A3 {
     _marker: PhantomData<*const ()>,
 }
-unsafe impl Send for Timer0A3 {}
-impl Timer0A3 {
+unsafe impl Send for TIMER0_A3 {}
+impl TIMER0_A3 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const timer0_a3::RegisterBlock = 0x012e as *const _;
     #[doc = r"Return the pointer to the register block"]
@@ -630,26 +630,26 @@ impl Timer0A3 {
         }
     }
 }
-impl Deref for Timer0A3 {
+impl Deref for TIMER0_A3 {
     type Target = timer0_a3::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
     }
 }
-impl core::fmt::Debug for Timer0A3 {
+impl core::fmt::Debug for TIMER0_A3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Timer0A3").finish()
+        f.debug_struct("TIMER0_A3").finish()
     }
 }
 #[doc = "Timer A3"]
 pub mod timer0_a3;
 #[doc = "Timer1_A3"]
-pub struct Timer1A3 {
+pub struct TIMER1_A3 {
     _marker: PhantomData<*const ()>,
 }
-unsafe impl Send for Timer1A3 {}
-impl Timer1A3 {
+unsafe impl Send for TIMER1_A3 {}
+impl TIMER1_A3 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const timer0_a3::RegisterBlock = 0x011e as *const _;
     #[doc = r"Return the pointer to the register block"]
@@ -676,26 +676,26 @@ impl Timer1A3 {
         }
     }
 }
-impl Deref for Timer1A3 {
+impl Deref for TIMER1_A3 {
     type Target = timer0_a3::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
     }
 }
-impl core::fmt::Debug for Timer1A3 {
+impl core::fmt::Debug for TIMER1_A3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Timer1A3").finish()
+        f.debug_struct("TIMER1_A3").finish()
     }
 }
 #[doc = "Timer1_A3"]
 pub use self::timer0_a3 as timer1_a3;
 #[doc = "Watchdog Timer"]
-pub struct WatchdogTimer {
+pub struct WATCHDOG_TIMER {
     _marker: PhantomData<*const ()>,
 }
-unsafe impl Send for WatchdogTimer {}
-impl WatchdogTimer {
+unsafe impl Send for WATCHDOG_TIMER {}
+impl WATCHDOG_TIMER {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const watchdog_timer::RegisterBlock = 0x0120 as *const _;
     #[doc = r"Return the pointer to the register block"]
@@ -722,26 +722,26 @@ impl WatchdogTimer {
         }
     }
 }
-impl Deref for WatchdogTimer {
+impl Deref for WATCHDOG_TIMER {
     type Target = watchdog_timer::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
     }
 }
-impl core::fmt::Debug for WatchdogTimer {
+impl core::fmt::Debug for WATCHDOG_TIMER {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("WatchdogTimer").finish()
+        f.debug_struct("WATCHDOG_TIMER").finish()
     }
 }
 #[doc = "Watchdog Timer"]
 pub mod watchdog_timer;
 #[doc = "Flash"]
-pub struct Flash {
+pub struct FLASH {
     _marker: PhantomData<*const ()>,
 }
-unsafe impl Send for Flash {}
-impl Flash {
+unsafe impl Send for FLASH {}
+impl FLASH {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const flash::RegisterBlock = 0x0128 as *const _;
     #[doc = r"Return the pointer to the register block"]
@@ -768,16 +768,16 @@ impl Flash {
         }
     }
 }
-impl Deref for Flash {
+impl Deref for FLASH {
     type Target = flash::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
     }
 }
-impl core::fmt::Debug for Flash {
+impl core::fmt::Debug for FLASH {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Flash").finish()
+        f.debug_struct("FLASH").finish()
     }
 }
 #[doc = "Flash"]
@@ -788,35 +788,35 @@ static mut DEVICE_PERIPHERALS: bool = false;
 #[allow(non_snake_case)]
 pub struct Peripherals {
     #[doc = "SPECIAL_FUNCTION"]
-    pub special_function: SpecialFunction,
+    pub SPECIAL_FUNCTION: SPECIAL_FUNCTION,
     #[doc = "PORT_3_4"]
-    pub port_3_4: Port3_4,
+    pub PORT_3_4: PORT_3_4,
     #[doc = "PORT_1_2"]
-    pub port_1_2: Port1_2,
+    pub PORT_1_2: PORT_1_2,
     #[doc = "SYSTEM_CLOCK"]
-    pub system_clock: SystemClock,
+    pub SYSTEM_CLOCK: SYSTEM_CLOCK,
     #[doc = "COMPARATOR_A"]
-    pub comparator_a: ComparatorA,
+    pub COMPARATOR_A: COMPARATOR_A,
     #[doc = "USCI_A0_UART_MODE"]
-    pub usci_a0_uart_mode: UsciA0UartMode,
+    pub USCI_A0_UART_MODE: USCI_A0_UART_MODE,
     #[doc = "USCI_A0_SPI_MODE"]
-    pub usci_a0_spi_mode: UsciA0SpiMode,
+    pub USCI_A0_SPI_MODE: USCI_A0_SPI_MODE,
     #[doc = "USCI_B0_I2C_MODE"]
-    pub usci_b0_i2c_mode: UsciB0I2cMode,
+    pub USCI_B0_I2C_MODE: USCI_B0_I2C_MODE,
     #[doc = "USCI_B0_SPI_MODE"]
-    pub usci_b0_spi_mode: UsciB0SpiMode,
+    pub USCI_B0_SPI_MODE: USCI_B0_SPI_MODE,
     #[doc = "TLV_CALIBRATION_DATA"]
-    pub tlv_calibration_data: TlvCalibrationData,
+    pub TLV_CALIBRATION_DATA: TLV_CALIBRATION_DATA,
     #[doc = "CALIBRATION_DATA"]
-    pub calibration_data: CalibrationData,
+    pub CALIBRATION_DATA: CALIBRATION_DATA,
     #[doc = "TIMER0_A3"]
-    pub timer0_a3: Timer0A3,
+    pub TIMER0_A3: TIMER0_A3,
     #[doc = "TIMER1_A3"]
-    pub timer1_a3: Timer1A3,
+    pub TIMER1_A3: TIMER1_A3,
     #[doc = "WATCHDOG_TIMER"]
-    pub watchdog_timer: WatchdogTimer,
+    pub WATCHDOG_TIMER: WATCHDOG_TIMER,
     #[doc = "FLASH"]
-    pub flash: Flash,
+    pub FLASH: FLASH,
 }
 impl Peripherals {
     #[doc = r" Returns all the peripherals *once*."]
@@ -839,21 +839,21 @@ impl Peripherals {
     pub unsafe fn steal() -> Self {
         DEVICE_PERIPHERALS = true;
         Peripherals {
-            special_function: SpecialFunction::steal(),
-            port_3_4: Port3_4::steal(),
-            port_1_2: Port1_2::steal(),
-            system_clock: SystemClock::steal(),
-            comparator_a: ComparatorA::steal(),
-            usci_a0_uart_mode: UsciA0UartMode::steal(),
-            usci_a0_spi_mode: UsciA0SpiMode::steal(),
-            usci_b0_i2c_mode: UsciB0I2cMode::steal(),
-            usci_b0_spi_mode: UsciB0SpiMode::steal(),
-            tlv_calibration_data: TlvCalibrationData::steal(),
-            calibration_data: CalibrationData::steal(),
-            timer0_a3: Timer0A3::steal(),
-            timer1_a3: Timer1A3::steal(),
-            watchdog_timer: WatchdogTimer::steal(),
-            flash: Flash::steal(),
+            SPECIAL_FUNCTION: SPECIAL_FUNCTION::steal(),
+            PORT_3_4: PORT_3_4::steal(),
+            PORT_1_2: PORT_1_2::steal(),
+            SYSTEM_CLOCK: SYSTEM_CLOCK::steal(),
+            COMPARATOR_A: COMPARATOR_A::steal(),
+            USCI_A0_UART_MODE: USCI_A0_UART_MODE::steal(),
+            USCI_A0_SPI_MODE: USCI_A0_SPI_MODE::steal(),
+            USCI_B0_I2C_MODE: USCI_B0_I2C_MODE::steal(),
+            USCI_B0_SPI_MODE: USCI_B0_SPI_MODE::steal(),
+            TLV_CALIBRATION_DATA: TLV_CALIBRATION_DATA::steal(),
+            CALIBRATION_DATA: CALIBRATION_DATA::steal(),
+            TIMER0_A3: TIMER0_A3::steal(),
+            TIMER1_A3: TIMER1_A3::steal(),
+            WATCHDOG_TIMER: WATCHDOG_TIMER::steal(),
+            FLASH: FLASH::steal(),
         }
     }
 }

@@ -1,151 +1,151 @@
 #[doc = "Register `P2DIR` reader"]
-pub type R = crate::R<P2dirSpec>;
+pub type R = crate::R<P2DIR_SPEC>;
 #[doc = "Register `P2DIR` writer"]
-pub type W = crate::W<P2dirSpec>;
+pub type W = crate::W<P2DIR_SPEC>;
 #[doc = "Field `P0` reader - P0"]
-pub type P0R = crate::BitReader;
+pub type P0_R = crate::BitReader;
 #[doc = "Field `P0` writer - P0"]
-pub type P0W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type P0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `P2DIR` reader - Port 2 Direction register"]
-pub type P2dirR = crate::FieldReader;
+pub type P2DIR_R = crate::FieldReader;
 #[doc = "Field `P2DIR` writer - Port 2 Direction register"]
-pub type P2dirW<'a, REG> = crate::FieldWriter<'a, REG, 8, u8, crate::Safe>;
+pub type P2DIR_W<'a, REG> = crate::FieldWriter<'a, REG, 8, u8, crate::Safe>;
 #[doc = "Field `P1` reader - P1"]
-pub type P1R = crate::BitReader;
+pub type P1_R = crate::BitReader;
 #[doc = "Field `P1` writer - P1"]
-pub type P1W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type P1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `P2` reader - P2"]
-pub type P2R = crate::BitReader;
+pub type P2_R = crate::BitReader;
 #[doc = "Field `P2` writer - P2"]
-pub type P2W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type P2_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `P3` reader - P3"]
-pub type P3R = crate::BitReader;
+pub type P3_R = crate::BitReader;
 #[doc = "Field `P3` writer - P3"]
-pub type P3W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type P3_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `P4` reader - P4"]
-pub type P4R = crate::BitReader;
+pub type P4_R = crate::BitReader;
 #[doc = "Field `P4` writer - P4"]
-pub type P4W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type P4_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `P5` reader - P5"]
-pub type P5R = crate::BitReader;
+pub type P5_R = crate::BitReader;
 #[doc = "Field `P5` writer - P5"]
-pub type P5W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type P5_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `P6` reader - P6"]
-pub type P6R = crate::BitReader;
+pub type P6_R = crate::BitReader;
 #[doc = "Field `P6` writer - P6"]
-pub type P6W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type P6_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `P7` reader - P7"]
-pub type P7R = crate::BitReader;
+pub type P7_R = crate::BitReader;
 #[doc = "Field `P7` writer - P7"]
-pub type P7W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type P7_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - P0"]
     #[inline(always)]
-    pub fn p0(&self) -> P0R {
-        P0R::new((self.bits & 1) != 0)
+    pub fn p0(&self) -> P0_R {
+        P0_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bits 0:7 - Port 2 Direction register"]
     #[inline(always)]
-    pub fn p2dir(&self) -> P2dirR {
-        P2dirR::new(self.bits)
+    pub fn p2dir(&self) -> P2DIR_R {
+        P2DIR_R::new(self.bits)
     }
     #[doc = "Bit 1 - P1"]
     #[inline(always)]
-    pub fn p1(&self) -> P1R {
-        P1R::new(((self.bits >> 1) & 1) != 0)
+    pub fn p1(&self) -> P1_R {
+        P1_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - P2"]
     #[inline(always)]
-    pub fn p2(&self) -> P2R {
-        P2R::new(((self.bits >> 2) & 1) != 0)
+    pub fn p2(&self) -> P2_R {
+        P2_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - P3"]
     #[inline(always)]
-    pub fn p3(&self) -> P3R {
-        P3R::new(((self.bits >> 3) & 1) != 0)
+    pub fn p3(&self) -> P3_R {
+        P3_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - P4"]
     #[inline(always)]
-    pub fn p4(&self) -> P4R {
-        P4R::new(((self.bits >> 4) & 1) != 0)
+    pub fn p4(&self) -> P4_R {
+        P4_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - P5"]
     #[inline(always)]
-    pub fn p5(&self) -> P5R {
-        P5R::new(((self.bits >> 5) & 1) != 0)
+    pub fn p5(&self) -> P5_R {
+        P5_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - P6"]
     #[inline(always)]
-    pub fn p6(&self) -> P6R {
-        P6R::new(((self.bits >> 6) & 1) != 0)
+    pub fn p6(&self) -> P6_R {
+        P6_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - P7"]
     #[inline(always)]
-    pub fn p7(&self) -> P7R {
-        P7R::new(((self.bits >> 7) & 1) != 0)
+    pub fn p7(&self) -> P7_R {
+        P7_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - P0"]
     #[inline(always)]
-    pub fn p0(&mut self) -> P0W<P2dirSpec> {
-        P0W::new(self, 0)
+    pub fn p0(&mut self) -> P0_W<P2DIR_SPEC> {
+        P0_W::new(self, 0)
     }
     #[doc = "Bits 0:7 - Port 2 Direction register"]
     #[inline(always)]
-    pub fn p2dir(&mut self) -> P2dirW<P2dirSpec> {
-        P2dirW::new(self, 0)
+    pub fn p2dir(&mut self) -> P2DIR_W<P2DIR_SPEC> {
+        P2DIR_W::new(self, 0)
     }
     #[doc = "Bit 1 - P1"]
     #[inline(always)]
-    pub fn p1(&mut self) -> P1W<P2dirSpec> {
-        P1W::new(self, 1)
+    pub fn p1(&mut self) -> P1_W<P2DIR_SPEC> {
+        P1_W::new(self, 1)
     }
     #[doc = "Bit 2 - P2"]
     #[inline(always)]
-    pub fn p2(&mut self) -> P2W<P2dirSpec> {
-        P2W::new(self, 2)
+    pub fn p2(&mut self) -> P2_W<P2DIR_SPEC> {
+        P2_W::new(self, 2)
     }
     #[doc = "Bit 3 - P3"]
     #[inline(always)]
-    pub fn p3(&mut self) -> P3W<P2dirSpec> {
-        P3W::new(self, 3)
+    pub fn p3(&mut self) -> P3_W<P2DIR_SPEC> {
+        P3_W::new(self, 3)
     }
     #[doc = "Bit 4 - P4"]
     #[inline(always)]
-    pub fn p4(&mut self) -> P4W<P2dirSpec> {
-        P4W::new(self, 4)
+    pub fn p4(&mut self) -> P4_W<P2DIR_SPEC> {
+        P4_W::new(self, 4)
     }
     #[doc = "Bit 5 - P5"]
     #[inline(always)]
-    pub fn p5(&mut self) -> P5W<P2dirSpec> {
-        P5W::new(self, 5)
+    pub fn p5(&mut self) -> P5_W<P2DIR_SPEC> {
+        P5_W::new(self, 5)
     }
     #[doc = "Bit 6 - P6"]
     #[inline(always)]
-    pub fn p6(&mut self) -> P6W<P2dirSpec> {
-        P6W::new(self, 6)
+    pub fn p6(&mut self) -> P6_W<P2DIR_SPEC> {
+        P6_W::new(self, 6)
     }
     #[doc = "Bit 7 - P7"]
     #[inline(always)]
-    pub fn p7(&mut self) -> P7W<P2dirSpec> {
-        P7W::new(self, 7)
+    pub fn p7(&mut self) -> P7_W<P2DIR_SPEC> {
+        P7_W::new(self, 7)
     }
 }
 #[doc = "Port 2 Direction\n\nYou can [`read`](crate::Reg::read) this register and get [`p2dir::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`p2dir::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct P2dirSpec;
-impl crate::RegisterSpec for P2dirSpec {
+pub struct P2DIR_SPEC;
+impl crate::RegisterSpec for P2DIR_SPEC {
     type Ux = u8;
 }
 #[doc = "`read()` method returns [`p2dir::R`](R) reader structure"]
-impl crate::Readable for P2dirSpec {}
+impl crate::Readable for P2DIR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`p2dir::W`](W) writer structure"]
-impl crate::Writable for P2dirSpec {
+impl crate::Writable for P2DIR_SPEC {
     type Safety = crate::Safe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
 }
 #[doc = "`reset()` method sets P2DIR to value 0"]
-impl crate::Resettable for P2dirSpec {
+impl crate::Resettable for P2DIR_SPEC {
     const RESET_VALUE: u8 = 0;
 }
